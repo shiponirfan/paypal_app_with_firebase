@@ -47,7 +47,7 @@ class _LoginViewState extends State<LoginView> {
                   height: 30,
                 ),
                 CustomButton(
-                  title: 'Log in',
+                  title: 'Log In',
                   onTap: () {},
                 ),
               ],
@@ -74,7 +74,7 @@ class _LoginViewState extends State<LoginView> {
                   height: 25,
                 ),
                 InkWell(
-                  onTap: () => Get.to(const SignUpView()),
+                  onTap: () => Get.to(const SignUpView(),transition: Transition.cupertino,duration: const Duration(seconds: 1)),
                   splashColor: Colors.transparent,
                   child: Text(
                     'Sign up',

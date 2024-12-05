@@ -6,18 +6,20 @@ class CustomTextInputField extends StatelessWidget {
   final String hintText;
   final TextEditingController controller;
   final bool? obscureText;
+  final TextInputType? textInputType;
 
   const CustomTextInputField({
     super.key,
     required this.hintText,
     required this.controller,
-    this.obscureText,
+    this.obscureText, this.textInputType,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       obscureText: obscureText ?? false,
+      keyboardType: textInputType,
       controller: controller,
       decoration: InputDecoration(
         hintText: hintText,

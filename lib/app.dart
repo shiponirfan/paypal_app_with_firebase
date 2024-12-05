@@ -13,6 +13,10 @@ class PayPalApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         inputDecorationTheme: _buildInputDecorationTheme(),
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white
+        )
       ),
       home: const SplashView(),
     );
