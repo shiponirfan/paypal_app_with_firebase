@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:paypal_ui_with_firebase/presentations/views/home_view.dart';
+import 'package:paypal_ui_with_firebase/presentations/views/main_bottom_navbar.dart';
 import 'package:paypal_ui_with_firebase/utils/app_colors.dart';
 import 'package:paypal_ui_with_firebase/widgets/custom_button.dart';
 import 'package:paypal_ui_with_firebase/widgets/custom_text_input_field.dart';
@@ -92,7 +92,7 @@ class _CompleteSetupViewState extends State<CompleteSetupView> {
             CustomButton(
               title: 'Complete Setup',
               onTap: () {
-                Get.to(Get.to(const HomeView(),
+                Get.to(Get.to(const MainBottomNavbar(),
                     transition: Transition.cupertino,
                     duration: const Duration(seconds: 1)));
               },
