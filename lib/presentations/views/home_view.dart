@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:paypal_ui_with_firebase/presentations/views/activity_view.dart';
+import 'package:paypal_ui_with_firebase/presentations/views/send_money/receiver_email_view.dart';
 import 'package:paypal_ui_with_firebase/utils/app_colors.dart';
 import 'package:paypal_ui_with_firebase/widgets/send_money_widget.dart';
 
@@ -110,7 +113,10 @@ class _HomeViewState extends State<HomeView> {
                     SendMoneyWidget(
                       icon: 'assets/images/upload-icon.png',
                       title: 'Send\nMoney',
-                      onTap: () {},
+                      onTap: () {
+                        Get.to(const ReceiverEmailView(),
+                            transition: Transition.cupertino);
+                      },
                     ),
                     const SizedBox(
                       width: 20,
@@ -138,12 +144,18 @@ class _HomeViewState extends State<HomeView> {
                         ),
                       ),
                     ),
-                    Text(
-                      'View all',
-                      style: GoogleFonts.manrope(
-                        textStyle: TextStyle(
-                          fontSize: 16,
-                          color: AppColors.subTitle,
+                    InkWell(
+                      onTap: () {
+                        Get.to(const ActivityView(),
+                            transition: Transition.cupertino);
+                      },
+                      child: Text(
+                        'View all',
+                        style: GoogleFonts.manrope(
+                          textStyle: TextStyle(
+                            fontSize: 16,
+                            color: AppColors.subTitle,
+                          ),
                         ),
                       ),
                     ),
